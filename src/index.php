@@ -33,9 +33,11 @@ include "CaptchaImage.php";
         <div class="flex flex-col gap-3">
           <label class="text-base text-white">حاصل عبارت را در کادر زیر وارد کنید:</label>
           <div class="flex gap-2">
-            <input name="sum" type="text" placeholder="حاصل جمع را وارد کنید" onkeypress="return /[۰-۹ | 0-9\s]/i.test(event.key)" class="w-full text-sm bg-white focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 border-transparent focus:outline-none p-1.5 rounded-xl">
+            <input name="sum" type="text" placeholder="حاصل جمع را وارد کنید" onkeypress="return /[۰-۹ | 0-9\s]/i.test(event.key)" class="w-full text-sm focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 focus:outline-none p-1.5 rounded-xl 
+              <?php if (isset($_SESSION['incorrect_sum']) && $_SESSION['incorrect_sum'] == 1) : ?> bg-red-200 border-red-200 <?php else : ?> bg-white border-transparent <?php endif; ?>">
             <?php $capImg->show(); ?>
           </div>
+          <?php if (isset($_SESSION['incorrect_sum']) && $_SESSION['incorrect_sum'] == 1) : ?> <span class="text-red-400 -mt-2">حاصل جمع را اشتباه وارد کردید.</span> <?php endif; ?>
         </div>
         <div class="flex flex-col gap-3">
           <input type="submit" value="ثبت" class="w-full text-sm bg-white focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 border-transparent focus:outline-none hover:bg-[#f0fbea] hover:opacity-65 hover:cursor-pointer transition duration-300 p-1.5 rounded-xl">

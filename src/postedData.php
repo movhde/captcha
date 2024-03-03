@@ -7,9 +7,11 @@ $sum = $_SESSION['number1'] + $_SESSION['number2'];
 if ($inputSum === $sum) {
   $_SESSION['incorrect_sum'] = false;
   echo "karet dorosteeeee";
-  session_destroy();
+  unset($_SESSION['number1']);
+  unset($_SESSION['number2']);
 } else {
   $_SESSION['incorrect_sum'] = true;
-  session_destroy();
+  unset($_SESSION['number1']);
+  unset($_SESSION['number2']);
   header("Location: http://localhost/captchaProject/src/");
 }
