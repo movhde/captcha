@@ -21,7 +21,7 @@ $passwordMatch = password_verify($password, $user['password'] ?? '');
 if ($user && $passwordMatch) {
   $_SESSION['incorrect_info'] = false;
   $_SESSION['loggedIn'] = $user['name'];
-  header("Location: http://localhost/captchaProject/src/welcome.php");
+  header("Location: http://localhost/captchaProject/src/index.php");
 } else {
   $_SESSION['incorrect_info'] = true;
   $_SESSION['loggedIn'] = '';

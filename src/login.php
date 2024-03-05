@@ -13,6 +13,8 @@ session_start();
   <title>Login</title>
 </head>
 
+<?php include "header.php" ?>
+
 <body dir="rtl" class="bg-[#f0fbea]">
   <div class="w-full h-auto min-h-screen flex justify-center items-center">
     <form action="auth.php" method="POST">
