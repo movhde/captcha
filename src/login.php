@@ -15,7 +15,7 @@ session_start();
 
 <?php include "header.php" ?>
 
-<body dir="rtl" class="bg-[#f0fbea]">
+<body dir="rtl" class="bg-[#f0fbea] font-yekan">
   <div class="container mx-auto px-4 h-auto min-h-screen flex justify-center items-center">
     <div class="shadow-xl bg-[#4F6F52] w-full max-w-lg h-auto p-7 rounded-2xl">
       <form action="auth.php" method="POST" class="flex flex-col gap-3">

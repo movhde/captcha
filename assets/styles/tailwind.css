@@ -3,3 +3,9 @@
 @tailwind components;
 @tailwind utilities;
  
+@font-face {
+  font-family: "yekan";
+  src: url("../fonts/IRANYekanX-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

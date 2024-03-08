@@ -15,7 +15,7 @@ include "CaptchaImage.php";
 
 <?php include "header.php" ?>
 
-<body dir="rtl" class="bg-[#f0fbea]">
+<body dir="rtl" class="bg-[#f0fbea] font-yekan">
   <div class="container mx-auto px-4 h-auto min-h-screen flex justify-center items-center">
     <div class="shadow-xl bg-[#4F6F52] w-full max-w-lg h-auto p-7  rounded-2xl">
       <form action="postedData.php" method="POST" class="flex flex-col gap-3">
@@ -35,7 +35,7 @@ include "CaptchaImage.php";
         <?php if (isset($_SESSION['hasLastNameErr']) && $_SESSION['hasLastNameErr'] == 1) : ?> <span class="text-sm text-red-400 -mt-2">ورود نام خانوادگی الزامیست.</span> <?php endif; ?>
         <div class="flex flex-col gap-2">
           <label class="text-base text-white">سن:</label>
-          <input type="text" name="u_age" onkeypress="return /[۰-۹ | 0-9\s]/i.test(event.key)" placeholder="سن خود را وارد کنید" class="text-sm focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 focus:outline-none p-1.5 rounded-xl
+          <input type="text" name="u_age" onkeydown="return /[۰-۹ | 0-9\s]/i.test(event.key)" placeholder="سن خود را وارد کنید" class="text-sm focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 focus:outline-none p-1.5 rounded-xl
           <?php if (isset($_SESSION['hasAgeErr']) && $_SESSION['hasAgeErr'] == 1) : ?> bg-red-200 border-red-200 <?php else : ?> bg-white border-transparent <?php endif; ?>">
         </div>
         <?php if (isset($_SESSION['hasAgeErr']) && $_SESSION['hasAgeErr'] == 1) : ?> <span class="text-sm text-red-400 -mt-2">ورود سن الزامیست.</span> <?php endif; ?>
@@ -67,7 +67,7 @@ include "CaptchaImage.php";
         <div class="flex flex-col gap-2">
           <label class="text-sm text-white">حاصل عبارت را در کادر زیر وارد کنید:</label>
           <div class="flex gap-2">
-            <input name="sum" type="text" placeholder="حاصل جمع را وارد کنید" onkeypress="return /[۰-۹ | 0-9\s]/i.test(event.key)" class="w-full text-sm focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 focus:outline-none p-1.5 rounded-xl 
+            <input name="sum" type="text" placeholder="حاصل جمع را وارد کنید" onkeydown="return /[۰-۹ | 0-9\s]/i.test(event.key)" class="w-full text-sm focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 focus:outline-none p-1.5 rounded-xl 
             <?php if (isset($_SESSION['incorrect_sum']) && $_SESSION['incorrect_sum'] == 1) : ?> bg-red-200 border-red-200 <?php else : ?> bg-white border-transparent <?php endif; ?>">
             <?php $capImg->show(); ?>
           </div>
