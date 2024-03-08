@@ -62,7 +62,7 @@ include "CaptchaImage.php";
           <span class="text-sm text-red-400 -mt-2">ورود رمز عبور الزامیست.</span>
         <?php endif; ?>
         <?php if (isset($_SESSION['invalidPass']) && $_SESSION['invalidPass'] == 1 &&  $_SESSION['hasPassErr'] == 0) : ?>
-          <span class="text-sm text-red-400 -mt-2">رمز عبور انتخابی باید حداقل دارای یک حرف بزرگ یک حرف کوچک و یک عدد باشد.</span>
+          <span class="text-sm text-red-400 -mt-2">رمز عبور انتخابی شما باید حداقل ۸ حرف و دارای یک حرف بزرگ یک حرف کوچک و یک عدد باشد.</span>
         <?php endif; ?>
         <div class="flex flex-col gap-2">
           <label class="text-sm text-white">حاصل عبارت را در کادر زیر وارد کنید:</label>
