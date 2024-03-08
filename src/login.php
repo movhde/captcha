@@ -16,9 +16,9 @@ session_start();
 <?php include "header.php" ?>
 
 <body dir="rtl" class="bg-[#f0fbea]">
-  <div class="w-full h-auto min-h-screen flex justify-center items-center">
-    <form action="auth.php" method="POST">
-      <div class="shadow-xl bg-[#4F6F52] w-96 max-w-2xl h-auto p-7 flex flex-col gap-3 rounded-2xl">
+  <div class="container mx-auto px-4 h-auto min-h-screen flex justify-center items-center">
+    <div class="shadow-xl bg-[#4F6F52] w-full max-w-lg h-auto p-7 rounded-2xl">
+      <form action="auth.php" method="POST" class="flex flex-col gap-3">
         <h3 class="text-white text-xl text-center">ورود به حساب کاربری</h3>
         <div class="flex flex-col gap-2">
           <label class="text-base text-white">ایمیل:</label>
@@ -34,7 +34,8 @@ session_start();
         <div class="flex flex-col gap-3 items-end">
           <input type="submit" value="ورود" class="w-32 text-sm bg-white focus:shadow-lg focus:shadow-[#f0fbea]-500/40 border-2 border-transparent focus:outline-none hover:bg-[#f0fbea] hover:opacity-65 hover:cursor-pointer transition duration-300 p-1.5 rounded-xl">
         </div>
-    </form>
+      </form>
+    </div>
   </div>
 </body>
 

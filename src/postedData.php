@@ -87,5 +87,5 @@ if ($cnt1 + $cnt2 + $cnt3 + $cnt4 + $cnt5 + $cnt6 + $cnt7 === 7) {
   session_destroy();
   header("Location: http://localhost/captchaProject/src/login.php");
 } else {
-  header("Location: http://localhost/captchaProject/src");
+  header("Location: http://localhost/captchaProject/src/signUp.php");
 }
